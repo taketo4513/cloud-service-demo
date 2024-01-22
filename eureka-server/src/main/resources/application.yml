@@ -25,10 +25,10 @@ eureka:
   # 服务实例的主机名, 用于在 Eureka 注册中心标识该实例
   instance:
     # 解决报错
-    # RROR ReplicationTaskProcessor(:) - Network level connection to peer localhost; retrying after delay
+    # ERROR ReplicationTaskProcessor(:) - Network level connection to peer localhost; retrying after delay
     hostname: localhost
   server:
-    #保护机制, 默认开启。关闭后, 保注册中心将不可用的实例剔除
+    # 保护机制, 默认开启。关闭后, 保注册中心将不可用的实例剔除
     enable-self-preservation: true
   # 是否启用健康检查, 默认为 true
   health-check-enabled: true
