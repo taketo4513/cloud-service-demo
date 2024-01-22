@@ -1,0 +1,25 @@
+server:
+  port: 9280
+
+# 日志配置
+logging:
+  # 指定日志配置文件位置
+  config: classpath:log4j2.xml
+
+spring:
+  # 数据库
+  datasource:
+    # 驱动
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    # 连接路径
+    url: jdbc:mysql://127.0.0.1:3306/order_service?useUnicode=true&characterEncoding=utf-8&allowMultiQueries=true&useSSL=false&serverTimezone=Asia/Shanghai&rewriteBatchedStatements=true
+    # 用户名
+    username: user
+    # 密码
+    password: 1q2w3e!Q@W#E
+
+# eureka配置
+eureka:
+  client:
+    service-url:
+      defaultZone: http:127.0.0.1:9080/eureka
