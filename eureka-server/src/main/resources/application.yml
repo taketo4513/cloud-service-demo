@@ -1,6 +1,7 @@
+server:
+  port: 9000
+
 spring:
-  profiles:
-    active: dev
   application:
     # 声明应用名称
     name: eureka-server
@@ -13,6 +14,9 @@ logging:
 # eureka配置
 eureka:
   client:
+    # 指定 Eureka 服务端的地址
+    service-url:
+      defaultZone: http://127.0.0.1:9000/eureka
     # 是否在启动时向 Eureka 注册中心注册服务实例
     register-with-eureka: false
     # 是否在启动时从 Eureka 注册中心获取已注册的服务实例信息
@@ -25,8 +29,9 @@ eureka:
   # 服务实例的主机名, 用于在 Eureka 注册中心标识该实例
   instance:
     # 解决报错
+    # 由 spring.profiles 引起
     # ERROR ReplicationTaskProcessor(:) - Network level connection to peer localhost; retrying after delay
-    hostname: localhost
+#    hostname: localhost
   server:
     # 保护机制, 默认开启。关闭后, 保注册中心将不可用的实例剔除
     enable-self-preservation: true
