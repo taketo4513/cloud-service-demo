@@ -1,21 +1,33 @@
 spring:
   profiles:
-    active: dev
-  application:
-    # 声明应用名称
-    name: order-service
+    active: eureka
 
 # 日志配置
 logging:
   # 指定日志配置文件位置
   config: log4j2.xml
 
-# eureka配置
-eureka:
-  client:
-    # 是否将自己注册到eureka中
-    register-with-eureka: false
-    # 是否从eureka中获取信息
-    fetch-registry: false
-    service-url:
-      defaultZone: http://127.0.0.1:8080/eureka
+http:
+  pool:
+    # 连接超时
+    connectTimeout: 5000
+    connectionRequestTimeout: 5000
+    defaultMaxPerRoute: 20
+    # 最大连接数
+    maxTotal: 100
+    # 服务器返回数据(response)的时间
+    socketTimeout: 500000
+    validateAfterInactivity: 30000
+
+mybatis-plus:
+  # 扫描Mapper接口对应的XML文件
+  mapper-locations: classpath:mapper/*.xml
+  configuration:
+    # 日志
+    #log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+    # 命名自动驼峰转换
+    map-underscore-to-camel-case: true
+  global-config:
+    db-config:
+      # 主键类型，auto：数据库id自增
+      id-type: auto

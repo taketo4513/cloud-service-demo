@@ -14,12 +14,6 @@ spring:
     # 连接路径
     url: jdbc:mysql://127.0.0.1:3306/user_service?useUnicode=true&characterEncoding=utf-8&allowMultiQueries=true&useSSL=false&serverTimezone=Asia/Shanghai&rewriteBatchedStatements=true
     # 用户名
-    username: user
+    username: root
     # 密码
     password: 1q2w3e!Q@W#E
-
-# eureka配置
-eureka:
-  client:
-    service-url:
-      defaultZone: http:127.0.0.1:9088/eureka
