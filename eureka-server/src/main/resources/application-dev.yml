@@ -4,5 +4,6 @@ server:
 # eureka配置
 eureka:
   client:
+  # 指定 Eureka 服务端的地址
   service-url:
     defaultZone: http://127.0.0.1:9081/eureka
