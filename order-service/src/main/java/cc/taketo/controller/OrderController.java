@@ -12,14 +12,14 @@ import javax.annotation.Resource;
 import java.util.List;
 
 @RestController
-@RequestMapping("/user")
+@RequestMapping("/order")
 public class OrderController {
 
     @Resource
     private OrderService userService;
 
-    @GetMapping("/get/${id}")
-    public Result<Order> getOrder(@PathVariable String id) {
+    @GetMapping("/get/{id}")
+    public Result<Order> getOrder(@PathVariable Integer id) {
         return Result.success(userService.getById(id));
     }
 

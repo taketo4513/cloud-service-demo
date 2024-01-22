@@ -18,8 +18,8 @@ public class UserController {
     @Resource
     private UserService userService;
 
-    @GetMapping("/get/${id}")
-    public Result<User> getUser(@PathVariable String id) {
+    @GetMapping("/get/{id}")
+    public Result<User> getUser(@PathVariable Integer id) {
         return Result.success(userService.getById(id));
     }
 
