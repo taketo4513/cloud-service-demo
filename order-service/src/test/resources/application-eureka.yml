@@ -2,9 +2,6 @@ server:
   port: 9282
 
 spring:
-  application:
-    # 声明应用名称
-    name: order-service
   # 数据库
   datasource:
     # 驱动

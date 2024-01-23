@@ -1,6 +1,9 @@
 spring:
+  application:
+    # 声明应用名称
+    name: user-service
   profiles:
-    active: eureka
+    active: nacos
 
 # 日志配置
 logging:

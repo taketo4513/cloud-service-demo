@@ -1,7 +1,11 @@
 server:
-  port: 9282
+  port: 9283
 
 spring:
+  cloud:
+    nacos:
+      # nacos地址
+      server-addr: 192.168.31.101:8848
   # 数据库
   datasource:
     # 驱动
@@ -12,9 +16,3 @@ spring:
     username: root
     # 密码
     password: 1q2w3e!Q@W#E
-
-# eureka配置
-eureka:
-  client:
-    service-url:
-      defaultZone: http://127.0.0.1:9000/eureka
