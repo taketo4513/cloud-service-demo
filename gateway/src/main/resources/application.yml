@@ -1,0 +1,31 @@
+server:
+  port: 8000
+
+spring:
+  application:
+    # 声明应用名称
+    name: gateway
+  main:
+    # 解决启动报错
+    # Please set spring.main.web-application-type=reactive or remove spring-boot-starter-web dependency.
+    web-application-type: reactive
+  cloud:
+    nacos:
+      server-addr: 192.168.31.101:8848
+    gateway:
+      routes:
+        # 路由规则id，自定义，唯一
+        - id: user
+          # 路由的目标服务，lb代表负载均衡，会从注册中心拉取服务列表
+          uri: lb://user-service
+          # 路由断言，判断当前请求是否符合当前规则，符合则路由到目标服务
+          predicates:
+            # 这里是以请求路径作为判断规则
+            - Path=/user/**
+          # 给当前请求添加一个请求头X-Request-red
+          filters:
+            - AddRequestHeader=X-Request, blue
+        - id: order
+          uri: lb://order-service
+          predicates:
+            - Path=/order/**,/ord/**
