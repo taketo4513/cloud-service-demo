@@ -1,0 +1,18 @@
+server:
+  port: 9283
+
+spring:
+  cloud:
+    nacos:
+      # nacos地址
+      server-addr: 192.168.31.101:8848
+  # 数据库
+  datasource:
+    # 驱动
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    # 连接路径
+    url: jdbc:mysql://192.168.31.101:3306/order_service?useUnicode=true&characterEncoding=utf-8&allowMultiQueries=true&useSSL=false&serverTimezone=Asia/Shanghai&rewriteBatchedStatements=true
+    # 用户名
+    username: root
+    # 密码
+    password: 1q2w3e!Q@W#E
