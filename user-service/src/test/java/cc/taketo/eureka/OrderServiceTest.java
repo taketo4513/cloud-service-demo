@@ -1,4 +1,4 @@
-package eureka;
+package cc.taketo.eureka;
 
 import cc.taketo.Application;
 import org.junit.jupiter.api.Test;
