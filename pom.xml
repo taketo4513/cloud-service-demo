@@ -19,6 +19,7 @@
         <module>user-service</module>
         <module>rest-template</module>
         <module>eureka-server</module>
+        <module>open-feign-api</module>
     </modules>
 
     <properties>
