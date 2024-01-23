@@ -27,7 +27,7 @@ eureka:
     # 规定的时间内未收到心跳，Eureka 服务端会认为租约过期，服务实例将被标记为不健康并可能被剔除。
     initial-instance-info-replication-interval-seconds: 40
   # 服务实例的主机名, 用于在 Eureka 注册中心标识该实例
-  instance:
+#  instance:
     # 解决报错
     # 由 spring.profiles 引起
     # ERROR ReplicationTaskProcessor(:) - Network level connection to peer localhost; retrying after delay
