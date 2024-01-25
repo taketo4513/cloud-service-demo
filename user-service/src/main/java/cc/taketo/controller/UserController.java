@@ -21,7 +21,7 @@ public class UserController {
 
     @GetMapping("/get/{id}")
     public Result<User> getUser(@PathVariable Integer id, @RequestHeader(value = "X-Request", required = false) String request) {
-        logger.info(request);
+        logger.info("RequestHeader: X-Request = {}", request);
         return Result.success(userService.getById(id));
     }
 
