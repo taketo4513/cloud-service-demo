@@ -1,6 +1,6 @@
 package cc.taketo.feign;
 
-import cc.taketo.Application;
+import cc.taketo.UserServiceApplication;
 import cc.taketo.client.OrderClient;
 import cc.taketo.common.Result;
 import cc.taketo.entity.Order;
@@ -16,7 +16,7 @@ import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 import java.util.List;
 
-@SpringBootTest(classes = Application.class)
+@SpringBootTest(classes = UserServiceApplication.class)
 public class OrderServiceTest {
 
     private Logger logger = LoggerFactory.getLogger(OrderServiceTest.class);

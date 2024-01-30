@@ -1,6 +1,6 @@
 package cc.taketo.nacos;
 
-import cc.taketo.Application;
+import cc.taketo.OrderServiceApplication;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.slf4j.Logger;
@@ -14,7 +14,7 @@ import javax.annotation.Resource;
 import java.util.List;
 import java.util.Random;
 
-@SpringBootTest(classes = Application.class)
+@SpringBootTest(classes = OrderServiceApplication.class)
 public class UserServiceTest {
 
     @Resource

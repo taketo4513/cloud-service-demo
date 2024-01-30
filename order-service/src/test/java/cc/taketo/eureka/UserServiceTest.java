@@ -1,6 +1,6 @@
 package cc.taketo.eureka;
 
-import cc.taketo.Application;
+import cc.taketo.OrderServiceApplication;
 import org.junit.jupiter.api.Test;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -9,7 +9,7 @@ import org.springframework.web.client.RestTemplate;
 
 import javax.annotation.Resource;
 
-@SpringBootTest(classes = Application.class)
+@SpringBootTest(classes = OrderServiceApplication.class)
 public class UserServiceTest {
 
     @Resource

@@ -14,9 +14,9 @@ import org.springframework.cloud.openfeign.EnableFeignClients;
 @MapperScan("cc.taketo.mapper")
 // 标识Spring Boot应用
 @SpringBootApplication
-public class Application {
+public class UserServiceApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(Application.class, args);
+        SpringApplication.run(UserServiceApplication.class, args);
     }
 }

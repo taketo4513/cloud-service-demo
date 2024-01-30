@@ -1,6 +1,6 @@
 package cc.taketo.feign;
 
-import cc.taketo.Application;
+import cc.taketo.OrderServiceApplication;
 import cc.taketo.client.UserClient;
 import cc.taketo.common.Result;
 import cc.taketo.entity.User;
@@ -13,7 +13,7 @@ import org.springframework.boot.test.context.SpringBootTest;
 import javax.annotation.Resource;
 import java.util.List;
 
-@SpringBootTest(classes = Application.class)
+@SpringBootTest(classes = OrderServiceApplication.class)
 public class UserServiceTest {
 
     private Logger logger = LoggerFactory.getLogger(UserServiceTest.class);
