@@ -1,0 +1,24 @@
+# Spring
+spring:
+  application:
+    # 声明应用名称
+    name: user-service
+  profiles:
+    # 环境配置
+    active: dev
+  cloud:
+    nacos:
+      discovery:
+        # 服务注册地址
+        server-addr: 192.168.31.101:8848
+        # 集群名称
+        cluster-name: HZ
+      config:
+        # 配置中心地址
+        server-addr: 192.168.31.101:8848
+        # 配置文件格式
+        file-extension: yml
+        # 默认加载配置ID: user-service-${profiles.active}.${file-extension}
+        # 共享配置
+        shared-configs:
+          - data-id: shared-common.yml

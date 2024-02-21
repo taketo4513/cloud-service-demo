@@ -13,6 +13,11 @@ spring:
     # 密码
     password: 1q2w3e!Q@W#E
 
+# 日志配置
+logging:
+  # 指定日志配置文件位置
+  config: log4j2.xml
+
 # eureka配置
 eureka:
   client:

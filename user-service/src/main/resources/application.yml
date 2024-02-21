@@ -1,15 +1,4 @@
-spring:
-  application:
-    # 声明应用名称
-    name: user-service
-  profiles:
-    active: nacos
-
-# 日志配置
-logging:
-  # 指定日志配置文件位置
-  config: log4j2.xml
-
+# mybatis-plus配置
 mybatis-plus:
   # 扫描Mapper接口对应的XML文件
   mapper-locations: classpath:mapper/*.xml
